@@ -11,7 +11,7 @@ do
  else
   	sensor="'sensor2'"  
 fi 
-export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c "insert into numbers values($i,$sensor);"
+export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c "INSERT INTO numbers VALUES($i,$sensor);"
 done
 
 
