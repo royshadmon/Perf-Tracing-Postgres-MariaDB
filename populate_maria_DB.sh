@@ -1,5 +1,5 @@
 mysql -u roy -D project -e 'DROP TABLE IF EXISTS numbers'
-mysql -u roy -D project -e 'CREATE TABLE numbers (number int, sensor char(50)'
+mysql -u roy -D project -e 'CREATE TABLE numbers (number int, sensor char(50));'
 
 max_rows=100
 for (( i=1; i<=$max_rows; i++ ))
