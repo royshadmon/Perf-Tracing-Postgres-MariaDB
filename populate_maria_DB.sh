@@ -1,7 +1,7 @@
 mysql -u roy -D project -e 'DROP TABLE IF EXISTS students'
 mysql -u roy -D project -e "CREATE TABLE students (
     student_id int,
-    dept_no int,
+    dept_no char(50),
     CONSTRAINT student_pk PRIMARY KEY (student_id)
 ); CREATE INDEX student_dept_idx ON students (dept_no);"
 
