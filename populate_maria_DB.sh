@@ -1,4 +1,4 @@
-mysql -u roy -D project -e 'DROP TABLE IF EXISTS students'
+mysql -u roy -D project -e 'DROP TABLE IF EXISTS students;'
 mysql -u roy -D project -e "CREATE TABLE students (
     student_id int,
     dept_no char(50),

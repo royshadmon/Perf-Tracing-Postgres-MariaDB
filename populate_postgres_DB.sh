@@ -1,5 +1,5 @@
 
-export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c 'DROP TABLE IF EXISTS students'
+export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c 'DROP TABLE IF EXISTS students;'
 export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c "CREATE TABLE students (
     student_id int,
     dept_no char(50),
