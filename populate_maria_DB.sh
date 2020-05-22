@@ -1,16 +1,20 @@
-mysql -u roy -D project -e 'DROP TABLE IF EXISTS numbers'
-mysql -u roy -D project -e 'CREATE TABLE numbers (number int, sensor char(50));'
+mysql -u roy -D project -e 'DROP TABLE IF EXISTS students'
+mysql -u roy -D project -e "CREATE TABLE students (
+    student_id int,
+    dept_no int,
+    CONSTRAINT student_pk PRIMARY KEY (student_id)
+); CREATE INDEX student_dept_idx ON students (dept_no);"
 
 max_rows=100
-for (( i=1; i<=$max_rows; i++ ))
+for (( student_id=1; student_id<=$max_rows; student_id++ ))
 do
- if [ $((i % 2)) -eq 0 ]
+ if [ $((student_id % 2)) -eq 0 ]
  then
- 	sensor="'sensor1'"  
+ 	dept="'Math'"  
  else
-  	sensor="'sensor2'"  
+  	dept="'CSE'"  
 fi 
-mysql -u roy -D project -e "INSERT INTO numbers VALUES($i,$sensor);"
+mysql -u roy -D project -e "INSERT INTO students VALUES($student_id,$dept);"
 done
 
 
