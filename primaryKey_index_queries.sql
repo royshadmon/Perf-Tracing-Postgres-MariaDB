@@ -4,15 +4,29 @@
 # Postgres 
 # student_pk index is stored as a B-tree index. Each element has a pointer to the students's heap. 
 # student_depto_index is stored in a B-tree with pointers to the heap, however, there is no uniqueness enforced. 
-CREATE TABLE students (
+perf stat psql -U postgres -d postgres -c "CREATE TABLE students (
     student_id int,
     dept_no int,
-    CONSTRAINT student_pk PRIMARY KEY (student_id);
-);
-CREATE INDEX student_depto_idx ON students (dept_no);
+    CONSTRAINT student_pk PRIMARY KEY (student_id)
+); CREATE INDEX student_dept_idx ON students (dept_no);"
 
-# Primary key lookup 
-SELECT * FROM students WHERE student_id = 10;
+# MariaDB
+perf stat mysql -u roy -D project -e "CREATE TABLE students (
+    student_id int,
+    dept_no int,
+    CONSTRAINT student_pk PRIMARY KEY (student_id)
+); CREATE INDEX student_dept_idx ON students (dept_no);"
+
+
+
+## Primary key lookup
+
+# Postgres 
+perf stat psql -U postgres -d postgres -c "SELECT * FROM students WHERE student_id = 10;"
+
+# MariaDB
+perf stat mysql -u roy -D project -e "SELECT * FROM students WHERE student_id = 10;"
+
 
 -- On PostgreSQL it can navigate through emp_pk index (one scan on the B-tree index) and then get the page/offset to get referencing row from employees heap table (one direct page/row fetch, not really a scan). So, one scan on the index, and one direct fetch on the heap.
 -- On MySQL it will just navigate through primary key index (one scan on the B-tree index), as all the information is already there, no other lookup is required. So, just one scan on the index.
