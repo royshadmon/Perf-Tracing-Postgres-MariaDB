@@ -2,6 +2,11 @@
 
 max_rows=$1
 
+if [ $# -ne 1 ]
+  then
+    echo "Input 1 argument which represents how many rows to populate the dbs"
+fi
+
 export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c 'DROP TABLE IF EXISTS students;'
 export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c "CREATE TABLE students (
     student_id int,
