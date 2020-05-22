@@ -11,9 +11,9 @@ for (( student_id=1; student_id<=$max_rows; student_id++ ))
 do
  if [ $((student_id % 2)) -eq 0 ]
  then
- 	dept="'Math'"  
+ 	dept="Math"  
  else
-  	dept="'CSE'"  
+  	dept="CSE"  
 fi 
 export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c "INSERT INTO students VALUES($student_id,$dept);"
 done
