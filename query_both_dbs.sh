@@ -1,15 +1,12 @@
 # Primary key lookup
-perf stat psql -U 'postgres' -d 'postgres' -c 'SELECT * FROM students WHERE student_id = 10;' > psql-primary-key-lookup.txt
-perf stat mysql -u roy -D project -e 'SELECT * FROM students WHERE student_id = 10;' > mariadb-primary-key-lookup.txt
+perf stat -o psql-primary-key-lookup.txt psql -U 'postgres' -d 'postgres' -c 'SELECT * FROM students WHERE student_id = 10;'  
+perf stat -o mariadb-primary-key-lookup.txt mysql -u roy -D project -e 'SELECT * FROM students WHERE student_id = 10;' 
 
 # Secondary index lookup
-perf stat psql -U 'postgres' -d 'postgres' -c 'SELECT * FROM students WHERE dept_no = 1;' > psql-secondary-index-lookup.txt
-perf stat mysql -u roy -D project -e 'SELECT * FROM students WHERE dept_no = 1;' > mariadb-secondary-index-lookup.txt
+perf stat -o psql-secondary-index-lookup.txt psql -U 'postgres' -d 'postgres' -c 'SELECT * FROM students WHERE dept_no = 1;' 
+perf stat -o mariadb-secondary-index-lookup.txt mysql -u roy -D project -e 'SELECT * FROM students WHERE dept_no = 1;' 
 
 # full scan
-perf stat psql -U 'postgres' -d 'postgres' -c 'SELECT * FROM students;' > psql-full-scan.txt
-perf stat mysql -u roy -D project -e 'SELECT * FROM students;' > mariadb-full-scan.txt
+perf stat -o psql-full-scan.txt psql -U 'postgres' -d 'postgres' -c 'SELECT * FROM students;'  
+perf stat -o mariadb-full-scan.txt mysql -u roy -D project -e 'SELECT * FROM students;' 
 
-
-#student_id int,
-    # dept_no char(50),
