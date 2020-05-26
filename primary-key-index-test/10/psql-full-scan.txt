@@ -1,0 +1,20 @@
+# started on Tue May 26 11:31:14 2020
+
+
+ Performance counter stats for 'psql -U postgres -d postgres -c SELECT * FROM students;':
+
+            149.96 msec task-clock                #    0.241 CPUs utilized          
+               281      context-switches          #    0.002 M/sec                  
+                 9      cpu-migrations            #    0.060 K/sec                  
+             5,503      page-faults               #    0.037 M/sec                  
+       364,603,210      cycles                    #    2.431 GHz                    
+       725,832,883      instructions              #    1.99  insn per cycle         
+       163,879,051      branches                  # 1092.794 M/sec                  
+         1,103,901      branch-misses             #    0.67% of all branches        
+
+       0.622131132 seconds time elapsed
+
+       0.132902000 seconds user
+       0.019316000 seconds sys
+
+

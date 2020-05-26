@@ -1,0 +1,20 @@
+# started on Tue May 26 11:31:15 2020
+
+
+ Performance counter stats for 'mysql -u roy -D project -e SELECT * FROM students WHERE student_id = 10;':
+
+              3.70 msec task-clock                #    0.894 CPUs utilized          
+                 5      context-switches          #    0.001 M/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+               287      page-faults               #    0.078 M/sec                  
+         8,862,081      cycles                    #    2.396 GHz                    
+        12,287,692      instructions              #    1.39  insn per cycle         
+         2,477,432      branches                  #  669.725 M/sec                  
+            40,299      branch-misses             #    1.63% of all branches        
+
+       0.004139668 seconds time elapsed
+
+       0.004022000 seconds user
+       0.000000000 seconds sys
+
+
