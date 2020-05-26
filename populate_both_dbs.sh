@@ -8,8 +8,8 @@ if [ $# -ne 1 ]
     exit
 fi
 
-export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c 'DROP TABLE IF EXISTS students;'
-export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c "CREATE TABLE students (
+psql -U 'postgres' -d 'postgres' -c 'DROP TABLE IF EXISTS students;'
+psql -U 'postgres' -d 'postgres' -c "CREATE TABLE students (
     student_id int,
     dept_no int,
     CONSTRAINT student_pk PRIMARY KEY (student_id)
@@ -23,7 +23,7 @@ do
  else
   	dept="2"  
 fi 
-export PGPASSWORD='demo'; psql -U 'postgres' -d 'postgres' -c "INSERT INTO students VALUES($student_id,$dept);"
+psql -U 'postgres' -d 'postgres' -c "INSERT INTO students VALUES($student_id,$dept);"
 done
 
 # populate MariaDB
