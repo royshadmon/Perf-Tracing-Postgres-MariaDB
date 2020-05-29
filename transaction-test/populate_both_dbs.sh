@@ -26,6 +26,7 @@ fi
 psql -U 'postgres' -d 'postgres' -c "INSERT INTO students VALUES($student_id,$dept);"
 done
 
+
 # populate MariaDB
 mysql -u roy -D project -e 'DROP TABLE IF EXISTS students;'
 mysql -u roy -D project -e "CREATE TABLE students (

@@ -1,5 +1,5 @@
 BEGIN TRANSACTION;
 
-INSERT INTO students VALUES(1000000000000,2);
+UPDATE students set dept_no=3 where student_id=1;
 
 COMMIT;
