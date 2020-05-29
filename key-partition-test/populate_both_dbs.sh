@@ -21,7 +21,7 @@ d="2014-06-29"
 for (( member_id=1; member_id<=$max_rows; member_id++ ))
 do
 	d=$(date -I -d "$d + 1 day")
-psql -U 'postgres' -d 'postgres' -c "INSERT INTO members VALUES($student_id,$d);"
+psql -U 'postgres' -d 'postgres' -c "INSERT INTO members VALUES($member_id,'$d');"
 done
 
 # populate MariaDB
@@ -36,7 +36,7 @@ d="2014-06-29"
 for (( member_id=1; member_id<=$max_rows; member_id++ ))
 do
  d=$(date -I -d "$d + 1 day")
-mysql -u roy -D project -e "INSERT INTO members VALUES($member_id,$d);"
+mysql -u roy -D project -e "INSERT INTO members VALUES($member_id,'$d');"
 done
 
 
