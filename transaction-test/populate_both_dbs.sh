@@ -11,9 +11,8 @@ fi
 psql -U 'postgres' -d 'postgres' -c 'DROP TABLE IF EXISTS students;'
 psql -U 'postgres' -d 'postgres' -c "CREATE TABLE students (
     student_id int,
-    dept_no int,
-    CONSTRAINT student_pk PRIMARY KEY (student_id)
-); CREATE INDEX student_dept_idx ON students (dept_no);"
+    dept_no int
+);"
 
 for (( student_id=1; student_id<=$max_rows; student_id++ ))
 do
@@ -31,9 +30,8 @@ done
 mysql -u roy -D project -e 'DROP TABLE IF EXISTS students;'
 mysql -u roy -D project -e "CREATE TABLE students (
     student_id int,
-    dept_no int,
-    CONSTRAINT student_pk PRIMARY KEY (student_id)
-); CREATE INDEX student_dept_idx ON students (dept_no);"
+    dept_no int
+);"
 
 for (( student_id=1; student_id<=$max_rows; student_id++ ))
 do
