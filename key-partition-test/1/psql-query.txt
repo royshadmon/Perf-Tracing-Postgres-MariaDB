@@ -1,21 +1,21 @@
-# started on Sat May 30 11:34:34 2020
+# started on Sat May 30 14:30:59 2020
 
 
  Performance counter stats for 'system wide':
 
-     6,305,720,031      branches                  #    3.418 M/sec                    (10.00%)
-       468,842,714      branch-misses             #    7.44% of all branches          (10.00%)
-   123,836,533,897      cycles                    #    0.067 GHz                      (12.50%)
-    31,132,621,097      instructions              #    0.25  insn per cycle           (15.00%)
-   371,655,343,992      ref-cycles                #  201.442 M/sec                    (17.50%)
-      1,844,975.82 msec cpu-clock                 #    4.000 CPUs utilized          
-            17,556      faults                    #    0.010 K/sec                  
-      1,844,975.83 msec task-clock                #    4.000 CPUs utilized          
-       773,216,750      L1-dcache-load-misses                                         (17.50%)
-     1,017,000,908      L1-icache-load-misses                                         (17.50%)
-       460,639,279      branch-load-misses        #    0.250 M/sec                    (17.50%)
-     1,719,299,011      l2_rqsts.code_rd_miss     #    0.932 M/sec                    (17.50%)
-     2,604,807,426      l2_rqsts.miss             #    1.412 M/sec                    (10.00%)
+         6,864,350      branches                  #   18.820 M/sec                    (9.56%)
+           621,388      branch-misses             #    9.05% of all branches          (10.65%)
+       113,441,613      cycles                    #    0.311 GHz                      (13.93%)
+        73,148,405      instructions              #    0.64  insn per cycle           (16.23%)
+       157,195,968      ref-cycles                #  430.989 M/sec                    (18.42%)
+            364.74 msec cpu-clock                 #    3.987 CPUs utilized          
+             4,189      faults                    #    0.011 M/sec                  
+            364.72 msec task-clock                #    3.986 CPUs utilized          
+         1,303,474      L1-dcache-load-misses                                         (18.42%)
+           872,291      L1-icache-load-misses                                         (18.42%)
+           413,390      branch-load-misses        #    1.133 M/sec                    (17.70%)
+           643,744      l2_rqsts.code_rd_miss     #    1.765 M/sec                    (16.61%)
+           380,948      l2_rqsts.miss             #    1.044 M/sec                    (8.78%)
 
-     461.245514528 seconds time elapsed
+       0.091493495 seconds time elapsed
 
