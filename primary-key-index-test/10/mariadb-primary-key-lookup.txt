@@ -1,0 +1,21 @@
+# started on Fri May 29 16:26:03 2020
+
+
+ Performance counter stats for 'system wide':
+
+           915,282      branches                  #    8.680 M/sec                    (2.20%)
+            15,741      branch-misses             #    1.72% of all branches          (4.21%)
+        38,939,140      cycles                    #    0.369 GHz                      (7.97%)
+        20,414,258      instructions              #    0.52  insn per cycle           (11.74%)
+        42,182,189      ref-cycles                #  400.047 M/sec                    (15.52%)
+            105.45 msec cpu-clock                 #    3.959 CPUs utilized          
+             1,192      faults                    #    0.011 M/sec                  
+            105.44 msec task-clock                #    3.959 CPUs utilized          
+           290,747      L1-dcache-load-misses                                         (19.24%)
+           170,545      L1-icache-load-misses                                         (23.03%)
+           105,429      branch-load-misses        #    1.000 M/sec                    (24.81%)
+           267,444      l2_rqsts.code_rd_miss     #    2.536 M/sec                    (21.02%)
+           280,987      l2_rqsts.miss             #    2.665 M/sec                    (5.82%)
+
+       0.026632480 seconds time elapsed
+
