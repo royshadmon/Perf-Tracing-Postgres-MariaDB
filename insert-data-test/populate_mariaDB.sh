@@ -9,7 +9,7 @@ fi
 # populate MariaDB
 mysql -u roy -D project -e 'DROP TABLE IF EXISTS students;'
 mysql -u roy -D project -e "CREATE TABLE students (
-  12345  student_id int,
+    student_id int,
     dept_no int
 );"
 
