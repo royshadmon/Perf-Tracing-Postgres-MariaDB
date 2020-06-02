@@ -7,8 +7,8 @@ if [ $# -ne 1 ]
 fi
 
 # populate MariaDB
-mysql -u roy -D project -e 'DROP TABLE IF EXISTS students;'
-mysql -u roy -D project -e "CREATE TABLE students (
+mysql -u root -D project -e 'DROP TABLE IF EXISTS students;'
+mysql -u root -D project -e "CREATE TABLE students (
     student_id int,
     dept_no int
 );"
@@ -21,5 +21,5 @@ do
  else
   	dept="2"  
 fi 
-mysql -u roy -D project -e "INSERT INTO students VALUES($student_id,$dept);"
+sudo mysql -u root -D project -e "INSERT INTO students VALUES($student_id,$dept);"
 done

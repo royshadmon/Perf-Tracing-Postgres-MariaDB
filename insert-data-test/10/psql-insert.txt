@@ -1,0 +1,42 @@
+# started on Mon Jun  1 20:56:23 2020
+
+#           time             counts unit events
+     0.400491888         31,735,001      branches                  #   19.815 M/sec                    (10.02%)
+     0.400491888            940,377      branch-misses             #    2.96% of all branches          (10.02%)
+     0.400491888        323,570,929      cycles                    #    0.202 GHz                      (12.52%)
+     0.400491888        187,722,545      instructions              #    0.58  insn per cycle           (15.01%)
+     0.400491888        523,386,024      ref-cycles                #  326.793 M/sec                    (17.51%)
+     0.400491888           1,601.58 msec cpu-clock                 #    4.004 CPUs utilized          
+     0.400491888             14,863      faults                    #    0.009 M/sec                  
+     0.400491888           1,601.58 msec task-clock                #    4.004 CPUs utilized          
+     0.400491888          2,935,008      L1-dcache-load-misses                                         (17.51%)
+     0.400491888          2,475,862      L1-icache-load-misses                                         (17.51%)
+     0.400491888          1,063,737      branch-load-misses        #    0.664 M/sec                    (17.48%)
+     0.400491888          2,600,624      l2_rqsts.code_rd_miss     #    1.624 M/sec                    (17.49%)
+     0.400491888          4,501,402      l2_rqsts.miss             #    2.811 M/sec                    (9.99%)
+     0.800890653         30,165,469      branches                  #   18.835 M/sec                    (10.01%)
+     0.800890653          1,251,536      branch-misses             #    4.04% of all branches          (10.02%)
+     0.800890653        308,030,085      cycles                    #    0.192 GHz                      (12.51%)
+     0.800890653        191,676,466      instructions              #    0.61  insn per cycle           (15.01%)
+     0.800890653        480,208,938      ref-cycles                #  299.837 M/sec                    (17.51%)
+     0.800890653           1,601.54 msec cpu-clock                 #    4.004 CPUs utilized          
+     0.800890653             15,040      faults                    #    0.009 M/sec                  
+     0.800890653           1,601.54 msec task-clock                #    4.004 CPUs utilized          
+     0.800890653          3,140,584      L1-dcache-load-misses                                         (17.51%)
+     0.800890653          2,860,579      L1-icache-load-misses                                         (17.51%)
+     0.800890653          1,017,436      branch-load-misses        #    0.635 M/sec                    (17.49%)
+     0.800890653          2,719,388      l2_rqsts.code_rd_miss     #    1.698 M/sec                    (17.48%)
+     0.800890653          4,898,863      l2_rqsts.miss             #    3.059 M/sec                    (9.99%)
+     1.088973923         11,674,364      branches                  #    8.041 M/sec                    (9.99%)
+     1.088973923            765,724      branch-misses             #    3.12% of all branches          (10.08%)
+     1.088973923        216,862,357      cycles                    #    0.149 GHz                      (12.60%)
+     1.088973923         68,424,534      instructions              #    0.24  insn per cycle           (15.08%)
+     1.088973923        383,209,391      ref-cycles                #  263.938 M/sec                    (17.56%)
+     1.088973923           1,152.46 msec cpu-clock                 #    2.881 CPUs utilized          
+     1.088973923             11,072      faults                    #    0.008 M/sec                  
+     1.088973923           1,152.62 msec task-clock                #    2.882 CPUs utilized          
+     1.088973923          2,299,092      L1-dcache-load-misses                                         (17.56%)
+     1.088973923          2,445,460      L1-icache-load-misses                                         (17.56%)
+     1.088973923            837,495      branch-load-misses        #    0.577 M/sec                    (17.50%)
+     1.088973923          3,029,647      l2_rqsts.code_rd_miss     #    2.087 M/sec                    (17.41%)
+     1.088973923          4,426,237      l2_rqsts.miss             #    3.049 M/sec                    (9.92%)

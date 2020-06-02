@@ -1,0 +1,16 @@
+# started on Mon Jun  1 20:56:22 2020
+
+#           time             counts unit events
+     0.303374409         14,736,189      branches                  #   12.145 M/sec                    (9.39%)
+     0.303374409            961,607      branch-misses             #    6.53% of all branches          (9.72%)
+     0.303374409        182,412,670      cycles                    #    0.150 GHz                      (12.36%)
+     0.303374409        109,852,056      instructions              #    0.60  insn per cycle           (15.00%)
+     0.303374409        325,612,937      ref-cycles                #  268.358 M/sec                    (17.63%)
+     0.303374409           1,213.29 msec cpu-clock                 #    3.033 CPUs utilized          
+     0.303374409             11,173      faults                    #    0.009 M/sec                  
+     0.303374409           1,213.42 msec task-clock                #    3.034 CPUs utilized          
+     0.303374409          2,419,548      L1-dcache-load-misses                                         (17.96%)
+     0.303374409          2,221,556      L1-icache-load-misses                                         (18.08%)
+     0.303374409          1,016,821      branch-load-misses        #    0.838 M/sec                    (17.94%)
+     0.303374409          2,081,475      l2_rqsts.code_rd_miss     #    1.715 M/sec                    (17.61%)
+     0.303374409          3,120,666      l2_rqsts.miss             #    2.572 M/sec                    (9.36%)
